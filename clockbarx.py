@@ -18,6 +18,9 @@ def clr():
      uh.show()
 sat = 0.0
 
+png(0,0,0.7)
+time.sleep(10)
+
 while True:
     tm = int(time.strftime("%S"))
     mm = int(time.strftime("%M"))
@@ -47,10 +50,10 @@ while True:
     posx = tm - 8 * line - 1
 
     if line < 4:
-	sat = mm * 0.0116
+	sat = mm * 0.016
     else:
-	sat = hh * 0.0583     
-    #print(sat)
+	sat = hh * 0.083     
+    print(sat)
     if posx == -1:
         clr()
     else:

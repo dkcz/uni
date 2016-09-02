@@ -16,7 +16,7 @@ def clear():
 			uh.set_pixel(x,y,0,0,0)
 	uh.show()
 
-sat = 0.4
+sat = 0.0
 
 
 while True:
@@ -24,9 +24,8 @@ while True:
 		for x in range(8):
 			png(x,y,sat,1,1)
 			uh.show()
-			sat = sat - 0.015
-			if sat <= 0:
-				sat=0.4
+			sat = sat + 0.015625
 			time.sleep(0.03)
+	print(sat)
 	clear()
 	sat= 0.0
