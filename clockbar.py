@@ -1,10 +1,21 @@
 import time
+import unicornhat as uh
 
-print()
+uh.set_layout(uh.HAT)
+uh.rotation(0)
+uh.brightness(1.0)
+
+
+def clr():
+    for x in range(8):
+        for y in range(8):
+            uh.set_pixel(x, y, 0, 0, 0)
+    uh.show()
+
 
 while True:
     tm = int(time.strftime("%S"))
-    #print (tm)
+    # print (tm)
     line = 0
     posx = 0
     if tm < 8:
@@ -27,7 +38,11 @@ while True:
     posx = tm - 8 * line - 1
     if posx == -1:
         posx = 0
-    print str(posx) + " , " + str(line) + " , " + str(tm)
+    if tm == 0:
+        clr()
 
+    # print str(posx) + " , " + str(line) + " , " + str(tm)
+    uh.set_pixel(posx, line, 255, 255, 255)
+    uh.show()
     time.sleep(1)
 
