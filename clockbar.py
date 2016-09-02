@@ -1,12 +1,13 @@
 import time
-#import unicornhat as uh
-
-#uh.set_layout(uh.HAT)
-#uh.rotation(0)
-#uh.brightness(1.0)
+import unicornhat as uh
+import colorsys as col
 
 
- def clr():
+uh.set_layout(uh.HAT)
+uh.rotation(0)
+uh.brightness(0.5)
+
+def clr():
      for x in range(8):
          for y in range(8):
              uh.set_pixel(x, y, 0, 0, 0)
@@ -38,11 +39,12 @@ while True:
     posx = tm - 8 * line - 1
     if posx == -1:
         clr()
-    # if tm == 0:
-    #     clr()
+    else:
+    	# if tm == 0:
+    	#     clr()
 
-    #print str(posx) + " , " + str(line) + " , " + str(tm)
-    uh.set_pixel(posx, line, 255, 255, 255)
-    uh.show()
+    	#print str(posx) + " , " + str(line) + " , " + str(tm)
+    	uh.set_pixel(posx, line, 255, 255, 255)
+    	uh.show()
     time.sleep(1)
 
