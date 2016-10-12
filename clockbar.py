@@ -12,10 +12,14 @@ def png(x,y,h):
 	uh.set_pixel(x,y,r,g,b)
 
 def clr():
-     for x in range(8):
-         for y in range(8):
+     spd=0.001
+     for y in range(7,-1,-1):
+         for x in range(7,-1,-1):
              uh.set_pixel(x, y, 0, 0, 0)
-     uh.show()
+	     uh.show()
+	     time.sleep(spd)
+	     spd+=0.0005
+     
 sat = 0.0
 
 while True:
@@ -59,7 +63,15 @@ while True:
 
     	#print str(posx) + " , " + str(line) + " , " + str(tm)
     	png(posx,line,sat)
+	if line == 7 and posx == 0:
+		png(7,7,sat)
+	elif line == 7 and posx == 1:
+		png(6,7,sat)
+	elif line == 7 and posx == 2:
+		png(5,7,sat)
+		png(4,7,sat)
+		png(3,7,sat)	
 	#uh.set_pixel(posx, line, 0, 255, 0)
     	uh.show()
-    time.sleep(1)
+        time.sleep(0.2)
 
