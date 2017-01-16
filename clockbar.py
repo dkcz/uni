@@ -55,6 +55,7 @@ while True:
     else:
 	sat = hh * 0.0583     
     #print(sat)
+    #print(hh)
     if posx == -1:
         clr()
     else:
