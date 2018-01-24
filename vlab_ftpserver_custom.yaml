@@ -1,0 +1,110 @@
+#firewall::use_new: true
+firewall::do_not_manage: true
+
+role::vlab::vsftpd:
+  anonymous_enable: 'NO'
+  ssl_enable: 'NO'
+  guest_enable: 'NO'
+  enable_virtual: 'NO'
+  pasv_enable: 'YES'
+  pasv_min_port: '10090'
+  pasv_max_port: '10100'
+
+
+role::vlab::vsftpd::custom::users:
+  test:
+    password: '$6$salt.ohdieneiT3$YRA4Wb.UunZkpNf2i7vUtZ33aQnkg7A74Ln/8z9vKA3w8lsr3J277JqL.0iw4BizgNoz/wuKuCFkJ6Z83yEd01'
+  testwh:
+    password: '$6$salt.ohdienei3T$c9Ohw8OBdmTpQyHlRYnEIImIQ1Ni4Da.3ehGAuDZbiHZfvqoMvrR7XHwiOHuq6m22IBN1IKcMqyDjdBbK1hXh.'
+  whtestalpha:
+    password: '$6$salt.ohdienei3T$jB8N9MZCkSWossL05qLaEGV.zETgL9blHiscrINSvViuXevir9Pn/uZMuNhBU0sAZ1MwLB/B/DL2xzGhVGbGz/'
+  whtestbeta:
+    password: '$6$salt.ohdienei3T$E8.T8KCoedMOtYj/ciPAZnV8rgUW8ZFi/4ey850ZoxHxPvok1PapSUNEwjUcWyqhY4aLS.lPi4DpNTOuNe8Ur1'
+  example:
+    password: '$6$salt.ohdieneiT3$YE3phQkQQpizlGujVxU55ihKQyTYHCCuiVy9j3hOhTYAzuz3w2EVksdqeU.aJjB.ISkMT7kGZM5fOXMbJFnPh.'
+  autologis:
+    password: '$6$salt.ohdieneiT3$RVxPoIN617thX4HTv99LHMBpi7eJJpTru8YqMfh8iq6OGNofpVHbbo5armSffkE5CTPOYFB95cYDMbgpFO2o31'
+  mesiltd:
+    password: '$6$salt.ohdieneiT3$YLZy0tS98QUKL1MLL.8FLDFTpiFGbpvmiqtwvsTYDeqK7Br6G/TGNVRL31DaGqFgshoDxJvIYozpvbUN9qzhT/'
+  sediru:
+    password: '$6$salt.ohdieneiT3$T5YaO0N.XWWyXIkffs6VLKkO7qF.0CbXctv5WWUBCeO4UB7.yjWXUbt1gaQl7qIk5bO7iYgxwsCzyZZr5lBQj/'
+  autologiscz:
+    password: '$6$salt.ohdieneiT3$7gsPneUqYdIpsLd1ZtItmU4QIrXV7s3ZEPADPyeP6Dh6pKW6lFEGRGL0yw2WxfOFDzchsoVUvEQunTvzEuWmy/'
+  mesimedicalcom:
+    password: '$6$salt.ohdieneiT3$FjqYXScMeHN2xZTMHA3IP6.K5t0VwM2TDlLZ3lapTLJNQJ6ZVvYq7vtP.8UYuMrHHYK0uiEbENWjQ2sR6QCsM0'
+  crosscountrycom:
+    password: '$6$salt.ohdieneiT3$VTiQ9AvfjMxfi4cFXNJfsjYxeGfqQKUBBsSh3Hs1F9tLJ8ny/fnLHWqfxapAJL7vNFN0WzdmQY7qYIBh2ylew/'
+  energizertechcom:
+    password: '$6$salt.ohdieneiT3$fdQCCMhAjxSXLoHQtMuB5LAdl4mOE0OjIK1xRyZ8B1FQ.322vYz2UI.AsiU3Ea.EltF8qjgBlco3tUhSCApvl0'
+  progeoit:
+    password: '$6$salt.ohdieneiT3$QjZuMuybHEOYUwKrVyRV3NOJtxv2HB7FGucgnQdCURrsFnj2GD3OOFN/e86sQD3I57gIeTxzfNnkaLQvkxjq/1'
+  kbcz:
+    password: '$6$salt.ohdieneiT3$PHRaWK96lgGkPErdQj9XWE6xJwpQCh5XWCK7K1kFvzweyicYZbKXt5lBPoI6OPjPvqL0jtkpeRT9X0BEtdrGi1'
+  idmfr:
+    password: '$6$salt.ohdieneiT3$Y7aYoCsiKQsCMtG2zZO8Iaf2MywkggNz3UQfLEqXIyuMPqeg2FfijHxFwf06WTg0QR7Aq/HhHAuyWCJ4gbAju0'
+  pitaxpl:
+    password: '$6$salt.ohdieneiT3$RAJN0sSwVD5QbMFVg6ofhxnmU0GCapuctJvHkYPRmwx8kexL.9aDQ5d0TLCCzTJ0Ov8b/e0WoIy7VmZAmKtcd.'
+  innovapostcom:
+    password: '$6$salt.ohdieneiT3$YiaeFimXsuvoj1/xrwiMszjtTGunRifIJIXhecsxlb0w6XOnZG76FiC1.bIrZBme/RfPSRMI0zrnwbrWQ65dk1'
+  nextfemit:
+    password: '$6$salt.ohdieneiT3$jv/oAvO9eduMQUUR/7ggifZ3bA/TkMJfZk.IwQ5CTrzptBxiXMQ9de48Kzaw4OnL2S6gZHM6D9hE2g1CFWMfD/'
+  itua:
+    password: '$6$salt.ohdieneiT3$v9rliHWfgC2C4oTXaYlV8gUKDYwh66fG/TiVDyHXjaUbH8cvc5w0caTFS.AjX/dVxWiSGu3sNm80AMSdTe7IJ.'
+  avastcom:
+    password: '$6$salt.ohdieneiT3$nBVlH3lwmJ6Kk8Fk5Av.F4KglHjtt9VRF74tbetGAKZBlzFwlaqdm9FD74d1iIvTmq1uNKxjp6hlFz7q5ymSV1'
+  playlogiqcom:
+    password: '$6$salt.ohdieneiT3$yMhqIwFEFkXmwQuwAiIBr1voDp1AD8u32iNlC.bpMc/kbEc0RxArjXo1Jva8EXq04mPfLZaHbLfsZ/Ll8/Z5N/'
+  Globalcomvacom:
+    password: '$6$salt.ohdieneiT3$wQh04PDmm4ly51SB52a5fMQZi.V07AcKe0AnlhhUE4JEirnLfjJbEvvCp19VU3h7uAQ0km7FQbZ2j8KyHC.0c.'
+  egnytecom:
+    password: '$6$salt.ohdieneiT3$aYYvTZ5y/5pT0/c.Q0bn1G2oV0DoUiAONC0OyBVZBEGxuFnams6Blf14tavzPmVIDHSuc1fJ4mqwVni4Un6Q81'
+  richosoftco:
+    password: '$6$salt.ohdieneiT3$1uZWqi1m1T0/tiaJ9ghBHAD/FPkRi1ORhDxmJwrkrsr/7EsS5mzLdoOoNo3liqKmBEoO0veAPFc6TCwo.k0n6.'
+  gpsoftpl:
+    password: '$6$salt.ohdieneiT3$0n9HwSKRKyXm/2FnGroN/8TSKyeaFQAhOh8vOCnllnvbf..z3c2BAcGvhCxTMqXgh50bGB4QNAIIbwnGLU/xK0'
+  msclockcom:
+    password: '$6$salt.ohdieneiT3$Cfb6ugLbDpuyscupzI6TCKaiRrNscB5MEHUZluLFU.T17hE6oGGekppFilJCIAcKWAUXz5H6DMt1RhpeW8gjx1'
+  idagiocom:
+    password: '$6$salt.ohdieneiT3$ll2cxGr8xkLeNTm8aDEnGHfgXKQHcHsH6HAV.ClT/J4ec9JXUsBlNUKs.njkCwMlW.FGSBryO50ATgNLzrTah.'
+  conexwarecom:
+    password: '$6$salt.ohdieneiT3$aPcYdj0GzjOhl6iPqh2ViZkEQS2H38zTVHm91e7lsw8FD.JSK/YpQ/Jl8l3Pj7JTk30E955vF17o74bledJld.'
+  businesscomdk:
+    password: '$6$salt.ohdieneiT3$zoV8e.olMGgdzVp/9foJjbTPJH6CmNSUVsfG5S1jSN/HKeYcohzzCDWgF2k2COrfjii0hRBQDqAaU4DCTTPCU.'
+  lorencookcom:
+    password: '$6$salt.ohdieneiT3$ImraSLuUKIx0Ovo2VAuNU/5.WQ6XwGT2.ATswVy0SEVjE4KiATntzrxIZ93uAa6BrxYe1U3x7zAIbl.8A0KL/1'
+  webde:
+    password: '$6$salt.ohdieneiT3$WIzy8VtWFDBlsmi5jPKVc8DQsCjGVO9mO7UUiBFzf7aG1GjKb9jZCPNk7McL86L.APah3Jja2Tt80c0eXXumL.'
+  jan-oliver-ruedigerde:
+    password: '$6$salt.ohdieneiT3$VirhgZfXVEvzcDZrzzYOfEqat7UUrg7NPi63V4pV92JNOitqAtyIEJ4tlyyXmtDGhz.GfU/3k9SziwjrgXqfS/'
+  hessynhu:
+    password: '$6$salt.ohdieneiT3$r6O.8ZPX.Absvjr3IO7VAGTHd8vI1s/5TB/Aj1dkn9JsJZJg7sxDDe2QHIJDJB1Xw1eAqtkBdqXsUE.uuZotM/'
+  sitelcom:
+    password: '$6$salt.ohdieneiT3$AEdkiawS5ypiQBNTeF0.LD9DIkGhk40/qq2ZCHUXUxh5RRGGZp1RR/rKa7YCjHwousXz1a4xHnHFsezzVIjJV0'
+  pchelpsoftcom:
+    password: '$6$salt.ohdieneiT3$8Uz8r21I4LGMtiCOeBfOrNNMm1.6XxuT/XnjvCumdXZwWBILg.XQtA2KxwRdlptGhahG12Xgu.dv9G50RUqQB.'
+  aviaretoaero:
+    password: '$6$salt.ohdieneiT3$MU294lKJZ.M7nuE9guynFtUkqI1r7qr0M.2zwtm69I4V8smnFfluzekzwds9bmtKUFS9GUO2aHjhEYnJIuqv41'
+  avanquestcom:
+    password: '$6$salt.ohdieneiT3$l4idobtErYmt87fZXpDvsHE0v9py.UGpp1aydoUJp2zL7O8B7NBbRTHwRFgBFfB5h5.mucDoAs8Je/IorvuHB1'
+  optimumoutputcom:
+    password: '$6$salt.ohdieneiT3$jCL30QvAuV3./6wXoxTiDyRmUYccjgrfzNp3FCSy.H.x.xHud23kGwgf.xIIVuBY8kJvFm88ruXFnR4ID9bQy.'
+  multiservicecom:
+    password: '$6$salt.ohdieneiT3$dKsEsGQc57KQUP0Vg.u97EvtJ9AWC/auqqMFRgIILUxqqZGRUNvJ9LL6n2vPNYxwsWbi3ySHHR4NbgswPbmpG/'
+  cordedu:
+    password: '$6$salt.ohdieneiT3$9ba0NbIrIwJPdvvPJ7Wdsd5QmtOpC5Gez8skqV6vbMn8R0Xk3G6B3HAEXWg7gu6VLMKXgvuOGRWq4oOUh1TRO/'
+  papas-bestcom:
+    password: '$6$salt.ohdieneiT3$Lhuy74OQbKSHGYnJ8DktCDTMQl3Go.CPv4pHjTHa0qgZHv2stYnpDf4KoCXQY8E84MvWi7jMyzL4n454ZmMaq0'
+  unilorfr:
+    password: '$6$salt.ohdieneiT3$LcPes7AdtxatyLjpoVvb0OVCnGiWNCZ7r7Y7AxGAmE00umHKlhElp2zbqT9thH4/XzPAQaPT8fZxCXgSuo62f.'
+  nttd-ico:
+    password: '$6$salt.ohdieneiT3$H5fJjpVfmbnbb8ci8WeC0Ctj9lzsXj8MmhMxurfDgLKW3Y2ty9pcwJbi00Stlyw3340Nkf/qQZNHnZPVS2wm2/'
+  flexeracom:
+    password: '$6$salt.ohdieneiT3$xh8/LEgNrsUkeoMjxaJF5vSq7H.Bgn9a6E2Bz6CbqVHfTdgmzOtUzG0yqYTDo12R3LsEAuo6WqSoLTK/h8Prs.'
+  exelit:
+    password: '$6$salt.ohdieneiT3$Lpvz2aR/Gl6snXzji6Ub/ibpKu0DqFLcn8lTLgAhprMkBYF/SspUKgrsm1Pq5hErcj9ckCKib4ki54P0wZYgb.'
+  wargamingnet:
+    password: '$6$salt.ohdieneiT3$W7LZOmfIGXHCenUkrsK4wg9R7KJ0tKrZ.7x/Pu7VR3Lm/Y8N4B9Kn.hkFqIdisja6fxcD2m5sJ35cF51Okdn50'
+  checkmarxcom:
+    password: '$6$salt.ohdieneiT3$C1kuN/mt03Ta.A0U74u4cPKj3uakniA1ASpYYDkKYyfHUtjeYtqySgNZoEqiBq/NPruigN5PD38C5aqJs0WfI/'
+  viklancz:
+    password: '$6$salt.ohdieneiT3$zzxSI0tXs6FrIMeWIoYfWvfN1U1Wz0McPS2sK2Jz/RG/sKPN5tZmnEqGDdCQ7NxxtMG6RFG2.S6UwDkU/8ALE1'
