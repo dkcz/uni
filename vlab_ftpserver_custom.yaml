@@ -10,6 +10,7 @@ role::vlab::vsftpd:
   pasv_min_port: '10090'
   pasv_max_port: '10100'
 
+pinda
 
 role::vlab::vsftpd::custom::users:
   test:
